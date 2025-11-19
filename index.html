@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蔡承宥的個人履歷</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { scroll-behavior: smooth; }
+    .hero {
+      min-height: 80vh;
+      background: url('https://picsum.photos/1400/800') center/cover no-repeat;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 1;
+    }
+    section { padding: 60px 0; }
+    .modal-backdrop.show { opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<!-- Header / Nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">蔡承宥</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#hero">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">專業經驗</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">學歷背景</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">技能專長</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">聯絡我</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero / Banner -->
+<section class="hero" id="hero">
+  <div class="content">
+    <h1 class="display-4">蔡承宥</h1>
+    <p class="lead">智慧科技與資訊系統初學者</p>
+    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">聯絡我</button>
+  </div>
+</section>
+
+<!-- 專業經驗 -->
+<section id="experience" class="container">
+  <h2 class="mb-4">專業經驗</h2>
+  <h4>現任職位</h4>
+  <p>私立靜宜大學 人工智慧系 學生 (2024 年至今)<br>
+  深入學習 AI 應用、資料分析與程式設計。<br>
+  參與校內專案與競賽，持續探索智慧科技可能性。</p>
+
+  <h4>過往經歷</h4>
+  <p>臺中市立中港高級中學 普通科 學生 (2021–2024)<br>
+  與夥伴共度青春，瘋癲中學會團隊合作與時間管理。</p>
+  <p>私立明道中學 普通科 學生 (2018–2021)<br>
+  初入青春，懵懂中開始對科技產生興趣。</p>
+</section>
+
+<!-- 學歷背景 -->
+<section id="education" class="container">
+  <h2 class="mb-4">學歷背景</h2>
+  <ul>
+    <li>私立靜宜大學 人工智慧系 (2024–至今)</li>
+    <li>臺中市立中港高級中學 普通科 (2021–2024)</li>
+    <li>私立明道中學 普通科 (2018–2021)</li>
+    <li>臺中市立清水國民小學 (2012–2018)</li>
+  </ul>
+  <p>生活哲學：「時間一去不復返，抱著好奇心活好每一天。」</p>
+</section>
+
+<!-- 技能與專長 -->
+<section id="skills" class="container">
+  <h2 class="mb-4">技能與專長</h2>
+  <h5>技術技能（學習中）</h5>
+  <p>程式語言：Python, Java<br>
+     工具與框架：TensorFlow（入門）、Git、VS Code<br>
+     資料科學：基礎資料分析、機器學習概念<br>
+     其他：Linux 基本操作、雲端服務初步體驗</p>
+  <h5>軟技能</h5>
+  <p>快速學習與適應力、團隊合作與溝通、幽默感</p>
+  <h5>證照與獎項</h5>
+  <p>K書王 團體賽冠軍 – MVP（2020）<br>
+     7-11 OPEN POINT 集點達人獎（2021）<br>
+     Google 評論「雞同鴨講」風格獎（2006 出生限定）<br>
+     「話都給我講」溝通潛力獎 – OK（2019）</p>
+</section>
+
+<!-- 聯絡我 Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">聯絡我</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="form-label">姓名</label>
+          <input class="form-control mb-3" type="text" required>
+
+          <label class="form-label">Email</label>
+          <input class="form-control mb-3" type="email" required>
+
+          <label class="form-label">留言內容</label>
+          <textarea class="form-control mb-3" rows="3" required></textarea>
+
+          <button class="btn btn-primary w-100">送出</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Modal 開啟時停止背景捲動
+  const modal = document.getElementById("contactModal");
+  modal.addEventListener("show.bs.modal", () => { document.body.style.overflow = "hidden"; });
+  modal.addEventListener("hidden.bs.modal", () => { document.body.style.overflow = ""; });
+</script>
+
+</body>
+</html>
